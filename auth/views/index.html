@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="myApp"> 
+  
+<head>
+    <title>User Login and Sessions</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo Black">
+</head>
+    
+<body>
+    <div ng-controller="myController">
+        <h2 id="welcomeText">Welcome to the super super-duper secrect keeper! Your username is: 
+            <%= username %>
+        </h2>
+        <a id="logoutLink" href="/logout">logout</a>
+        <a id="editLink" href="/user">Edit User</a>
+    </div>
+    <hr>
+    <span id="indexMsg">
+        <%= msg %>
+    </span>
+    <hr>
+        <p onmouseover="PlaySound('mySound')" id="secretis">
+            <%= color%>
+        </p>
+    <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+    <script src="/javascripts/my_app.js"></script>
+</body>
+
+<audio id='mySound' src="http://soundbible.com/grab.php?id=1937&type=mp3" type="audio/mp3"/>
+
+<script>
+
+function PlaySound(soundobj) {
+  var thissound=document.getElementById(soundobj);
+  thissound.play();
+}
+function StopSound(soundobj) {
+  var thissound=document.getElementById(soundobj);
+  thissound.pause();
+  thissound.currentTime = 0;
+}
+    
+</script>
+
+      
+</html>

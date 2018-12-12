@@ -1,0 +1,16 @@
+body {
+  padding: 50px;
+  font: 20px "Bungee", Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: yellow;
+}
+
+a {
+  color: red;
+}
+
+#secretis {
+  font-size: 100px;
+  font: 100px "Archivo Black"; 
+}
+
